@@ -11,7 +11,7 @@ export function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat()
 
   return (
-    <Card className="w-[440px]">
+    <Card className="w-[600px] max-w-[95vw]">
       <CardHeader>
         <CardTitle>AI Chatbot</CardTitle>
       </CardHeader>
