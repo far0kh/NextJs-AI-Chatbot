@@ -29,4 +29,5 @@ https://github.com/marketplace/models
 
 ```bash
 npm install openai
+npm install react-markdown
 ```
