@@ -16,7 +16,7 @@ export function Chat() {
         <CardTitle>AI Chatbot</CardTitle>
       </CardHeader>
       <CardContent>
-        <ScrollArea className="h-[600px] pr-4">
+        <ScrollArea className="h-[300px] pr-4">
           {messages.map(m => (
             <div key={m.id} className="mb-4 flex">
               {m.role === 'user' ? (

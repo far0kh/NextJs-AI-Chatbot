@@ -80,7 +80,7 @@ export function Chat() {
           <CardTitle>AI Chatbot</CardTitle>
         </CardHeader>
         <CardContent>
-          <ScrollArea className="h-[600px] pr-4" ref={scrollAreaRef}>
+          <ScrollArea className="h-[300px] pr-4" ref={scrollAreaRef}>
             {messages.map((m, index) => (
               <div key={index} className="mb-4 flex">
                 {m.role === 'user' ? (
