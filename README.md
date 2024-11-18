@@ -23,3 +23,10 @@ npm install zod
 ```bash
 npx shadcn@latest init
 ```
+
+## Use GitHub Models
+https://github.com/marketplace/models
+
+```bash
+npm install openai
+```
