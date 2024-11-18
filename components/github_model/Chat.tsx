@@ -7,6 +7,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
+import ReactMarkdown from 'react-markdown'
+
 type Message = {
   role: 'user' | 'assistant'
   content: string
@@ -73,12 +75,12 @@ export function Chat() {
 
   return (
     <div>
-      <Card className="w-[440px]">
+      <Card className="w-[600px] max-w-[95vw]">
         <CardHeader>
           <CardTitle>AI Chatbot</CardTitle>
         </CardHeader>
         <CardContent>
-          <ScrollArea className="max-h-screen h-[600px] pr-4" ref={scrollAreaRef}>
+          <ScrollArea className="h-[600px] pr-4" ref={scrollAreaRef}>
             {messages.map((m, index) => (
               <div key={index} className="mb-4 flex">
                 {m.role === 'user' ? (
@@ -91,8 +93,10 @@ export function Chat() {
                   </Avatar>
                 )}
                 <div className="ml-4 flex-1 space-y-2">
-                  <p className="text-sm font-medium leading-none">{m.role === 'user' ? 'You' : 'AI'}</p>
-                  <p className="text-sm text-muted-foreground">{m.content}</p>
+                  <p className="text-sm font-medium leading-none">
+                    {m.role === 'user' ? 'You' : 'AI'}
+                  </p>
+                  <ReactMarkdown children={m.content} />
                 </div>
               </div>
             ))}
